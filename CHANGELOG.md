@@ -22,4 +22,7 @@ Notable changes to Marklift are documented here.
   a Qt shutdown race between sequential conversion tests.
 - Updated GitHub Actions to Node 24-based action versions and restricted the
   workflow token to read-only repository contents.
+- Added an installer `/CURRENTUSER` command-line override for isolated,
+  non-administrative deployment while keeping the normal all-users install as
+  the default.
 - Refreshed the main-window screenshot to show the corrected Windows interface.

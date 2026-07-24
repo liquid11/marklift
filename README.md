@@ -14,9 +14,10 @@ embedded images, and scanned pages into editable Markdown. Your documents stay
 on your computer: Marklift does not upload files, require an account, call a
 cloud API, collect telemetry, or check for updates while it runs.
 
-> **Status:** Version 1.0.1 — release candidate. Automated and packaged-app E2E
-> verification are complete; installed-upgrade verification and trusted code
-> signing are still recommended before broad public distribution.
+> **Status:** Version 1.0.1 — verified Windows release. Automated,
+> packaged-application, and isolated installed-application E2E verification are
+> complete. The binaries are currently unsigned, so Windows SmartScreen may
+> display an additional warning.
 
 ![Marklift desktop interface](docs/images/marklift-main-window.png)
 
@@ -25,15 +26,16 @@ preview in one window.*
 
 ## Download for Windows
 
-For a non-technical user, use the **[Download Marklift for Windows](https://github.com/liquid11/marklift/releases/download/v1.0.0/Marklift-Setup-1.0.0.exe)** link.
+For a non-technical user, use the **[Download Marklift for Windows](https://github.com/liquid11/marklift/releases/download/v1.0.1/Marklift-Setup-1.0.1.exe)** link.
 Download the latest `.exe` installer, open it, and follow the setup instructions.
 You do not need to install Python or Tesseract separately.
 
-This is the current [Marklift v1.0.0 public release](https://github.com/liquid11/marklift/releases/tag/v1.0.0).
+This is the current [Marklift v1.0.1 public release](https://github.com/liquid11/marklift/releases/tag/v1.0.1).
 The [full Releases page](https://github.com/liquid11/marklift/releases) contains
-future versions. The `1.0.1` patch candidate and its
-[release-verification evidence](docs/releases/v1.0.1.md) are being finalized.
-The source code is available below for developers.
+previous and future versions. The
+[1.0.1 release-verification evidence](docs/releases/v1.0.1.md) documents the
+automated, packaged, installed, and cleanup checks. The source code is available
+below for developers.
 
 ## At a glance
 
