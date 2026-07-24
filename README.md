@@ -17,7 +17,7 @@ cloud API, collect telemetry, or check for updates while it runs.
 > **Status:** Version 1.0.1 — verified Windows release. Automated,
 > packaged-application, and isolated installed-application E2E verification are
 > complete. The binaries are currently unsigned, so Windows SmartScreen may
-> display an additional warning.
+> display an additional warning. Verify the release checksum before installing.
 
 ![Marklift desktop interface](docs/images/marklift-main-window.png)
 
@@ -36,6 +36,24 @@ previous and future versions. The
 [1.0.1 release-verification evidence](docs/releases/v1.0.1.md) documents the
 automated, packaged, installed, and cleanup checks. The source code is available
 below for developers.
+
+### Verify the download
+
+Marklift is currently unsigned. Before installing, verify that the downloaded
+installer has this SHA-256 checksum:
+
+```text
+80AF4A4AC6F762F3BD7328C884FDA4EA241AFD97AA313AF2B6F541BFEA00B0CE
+```
+
+In PowerShell, run this in the folder containing the downloaded installer:
+
+```powershell
+Get-FileHash .\Marklift-Setup-1.0.1.exe -Algorithm SHA256
+```
+
+The `Hash` value must match exactly. The release also includes a
+`Marklift-Setup-1.0.1.exe.sha256` checksum file for independent verification.
 
 ## At a glance
 
