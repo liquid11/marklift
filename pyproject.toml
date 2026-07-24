@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marklift"
+version = "1.0.0"
+description = "Marklift: a fully offline Windows PDF-to-Markdown converter"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = "==3.11.*"
+dependencies = [
+    "Pillow==12.1.0",
+    "PyMuPDF==1.28.0",
+    "pymupdf4llm==1.28.0",
+    "PySide6==6.11.1",
+    "pytesseract==0.3.13",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pyinstaller==6.21.0",
+    "pytest==9.1.1",
+    "ruff==0.15.21",
+]
+
+[project.scripts]
+marklift = "app.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra -m 'not performance'"
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = [
+    "performance: opt-in conversion performance check",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+exclude = [".venv", "dist", "build", "vendor"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
