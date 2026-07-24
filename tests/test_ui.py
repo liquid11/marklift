@@ -42,6 +42,8 @@ def _wait_for_queue(application: QApplication, window: MainWindow, timeout: floa
             or state.startswith("Failed:")
             for state in states
         ):
+            assert window.thread_pool.waitForDone(5000)
+            application.processEvents()
             return
         time.sleep(0.01)
     raise AssertionError(f"Queue did not finish: {window.job_states()}")

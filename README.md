@@ -14,9 +14,9 @@ embedded images, and scanned pages into editable Markdown. Your documents stay
 on your computer: Marklift does not upload files, require an account, call a
 cloud API, collect telemetry, or check for updates while it runs.
 
-> **Status:** Version 1.0.0 — release candidate. The source workflow is ready;
-> complete installed-build verification and trusted code signing are still
-> recommended before broad public distribution.
+> **Status:** Version 1.0.1 — release candidate. Automated and packaged-app E2E
+> verification are complete; installed-upgrade verification and trusted code
+> signing are still recommended before broad public distribution.
 
 ![Marklift desktop interface](docs/images/marklift-main-window.png)
 
@@ -31,7 +31,9 @@ You do not need to install Python or Tesseract separately.
 
 This is the current [Marklift v1.0.0 public release](https://github.com/liquid11/marklift/releases/tag/v1.0.0).
 The [full Releases page](https://github.com/liquid11/marklift/releases) contains
-future versions. The source code is available below for developers.
+future versions. The `1.0.1` patch candidate and its
+[release-verification evidence](docs/releases/v1.0.1.md) are being finalized.
+The source code is available below for developers.
 
 ## At a glance
 
@@ -107,7 +109,7 @@ it safely and get the result I want?”.
 The current packaging process produces:
 
 ```text
-dist/installer/Marklift-Setup-1.0.0.exe
+dist/installer/Marklift-Setup-1.0.1.exe
 ```
 
 ## System requirements
@@ -192,6 +194,8 @@ document synchronization.
 ## Documentation
 
 - [Changelog](CHANGELOG.md) — release notes and notable fixes
+- [1.0.1 Release Verification](docs/releases/v1.0.1.md) — automated, packaged
+  application, and artifact-integrity evidence
 - [User Guide](docs/USER_GUIDE.md) — installation, conversion workflows,
   output handling, troubleshooting, and privacy
 - [Specification](docs/Marklift_Specification_Driven_Development.md) —

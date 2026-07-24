@@ -2,7 +2,7 @@
 
 Notable changes to Marklift are documented here.
 
-## Unreleased
+## 1.0.1 - 2026-07-24
 
 ### Fixed
 
@@ -18,4 +18,6 @@ Notable changes to Marklift are documented here.
 
 - Added UI coverage that verifies the application icon and every action icon can
   be loaded from packaged resources.
+- Made the UI test completion gate wait for the worker thread itself, preventing
+  a Qt shutdown race between sequential conversion tests.
 - Refreshed the main-window screenshot to show the corrected Windows interface.
