@@ -20,4 +20,6 @@ Notable changes to Marklift are documented here.
   be loaded from packaged resources.
 - Made the UI test completion gate wait for the worker thread itself, preventing
   a Qt shutdown race between sequential conversion tests.
+- Updated GitHub Actions to Node 24-based action versions and restricted the
+  workflow token to read-only repository contents.
 - Refreshed the main-window screenshot to show the corrected Windows interface.
