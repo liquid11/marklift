@@ -191,6 +191,7 @@ document synchronization.
 
 ## Documentation
 
+- [Changelog](CHANGELOG.md) — release notes and notable fixes
 - [User Guide](docs/USER_GUIDE.md) — installation, conversion workflows,
   output handling, troubleshooting, and privacy
 - [Specification](docs/Marklift_Specification_Driven_Development.md) —

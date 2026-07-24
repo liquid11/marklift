@@ -10,12 +10,13 @@ import pymupdf
 
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 
-from PySide6.QtGui import QCloseEvent, QIcon, QPixmap
+from PySide6.QtGui import QCloseEvent, QPixmap
 from PySide6.QtWidgets import QApplication, QFileDialog, QHeaderView, QPushButton
 
 import app.main_window as main_window_module
 from app import strings
 from app.main_window import MainWindow, QueueJob, SourcePreview
+from app.resources import application_icon, asset_path, icon
 from engine import ConversionResult
 
 _APPLICATION = QApplication.instance() or QApplication([])
@@ -471,9 +472,11 @@ def test_source_preview_rescales_the_original_pixmap() -> None:
 
 
 def test_marklift_brand_and_icon_are_available() -> None:
-    icon_path = Path(main_window_module.__file__).with_name("assets") / "marklift-icon.png"
+    icon_path = asset_path("marklift-icon.png")
 
     assert strings.APP_NAME == "Marklift"
     assert strings.APP_TITLE == "Marklift"
     assert icon_path.is_file()
-    assert QIcon(str(icon_path)).isNull() is False
+    assert application_icon().isNull() is False
+    for name in ("add-files", "add-folder", "copy", "save-as", "save", "save-all", "cancel"):
+        assert icon(name).isNull() is False

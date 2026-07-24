@@ -40,6 +40,7 @@ from PySide6.QtWidgets import (
 )
 
 from app import strings
+from app.resources import icon as resource_icon
 from app.worker import ConversionWorker
 from engine import ConversionResult, render_page_thumbnail, save_conversion_result
 
@@ -268,16 +269,12 @@ class MainWindow(QMainWindow):
 
         self.add_files_button = QPushButton(strings.ADD_PDFS)
         self.add_files_button.setProperty("primary", True)
-        self.add_files_button.setIcon(
-            self.style().standardIcon(QStyle.StandardPixmap.SP_DialogOpenButton)
-        )
+        self.add_files_button.setIcon(resource_icon("add-files"))
         self.add_files_button.clicked.connect(self._choose_files)
         controls.addWidget(self.add_files_button)
 
         self.add_folder_button = QPushButton(strings.ADD_FOLDER)
-        self.add_folder_button.setIcon(
-            self.style().standardIcon(QStyle.StandardPixmap.SP_DirOpenIcon)
-        )
+        self.add_folder_button.setIcon(resource_icon("add-folder"))
         self.add_folder_button.clicked.connect(self._choose_folder)
         controls.addWidget(self.add_folder_button)
         controls.addStretch()
@@ -312,6 +309,7 @@ class MainWindow(QMainWindow):
         header.addStretch()
         self.save_all_button = QPushButton(strings.SAVE_ALL)
         self.save_all_button.setProperty("primary", True)
+        self.save_all_button.setIcon(resource_icon("save-all"))
         self.save_all_button.setEnabled(False)
         self.save_all_button.clicked.connect(self._save_all_ready)
         header.addWidget(self.save_all_button)
@@ -399,6 +397,9 @@ class MainWindow(QMainWindow):
         self.save_as_button = QPushButton(strings.SAVE_AS)
         self.save_button = QPushButton(strings.SAVE)
         self.save_button.setProperty("primary", True)
+        self.copy_button.setIcon(resource_icon("copy"))
+        self.save_as_button.setIcon(resource_icon("save-as"))
+        self.save_button.setIcon(resource_icon("save"))
         self.copy_button.clicked.connect(self._copy_selected)
         self.save_as_button.clicked.connect(self._save_selected_as)
         self.save_button.clicked.connect(self._save_selected)
@@ -512,6 +513,7 @@ class MainWindow(QMainWindow):
             self.queue.setCellWidget(row, 1, status_widget)
 
             cancel_button = QPushButton(strings.CANCEL)
+            cancel_button.setIcon(resource_icon("cancel"))
             cancel_button.clicked.connect(
                 lambda checked=False, value=job_id: self.cancel_job(value)
             )
