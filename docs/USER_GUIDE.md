@@ -24,7 +24,7 @@ or copy the Markdown. It does not require an account or an internet connection.
 For the best results, use a readable PDF and keep the Markdown file together
 with its optional asset folder when extracted images are included.
 
-![Marklift desktop interface](images/marklift-main-window.jpg)
+![Marklift desktop interface](images/marklift-main-window.png)
 
 The main window is organized around four areas: PDF intake, the conversion
 queue, a source-page preview, and a rendered Markdown preview.

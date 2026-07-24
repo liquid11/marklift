@@ -1,5 +1,9 @@
 # Marklift
 
+<p align="center">
+  <img src="src/app/assets/marklift-icon.png" alt="Marklift logo" width="128">
+</p>
+
 **Turn local PDFs into clean Markdown — privately, predictably, and fully offline.**
 
 > A focused Windows tool for people who need usable Markdown from important PDF
@@ -14,10 +18,21 @@ cloud API, collect telemetry, or check for updates while it runs.
 > complete installed-build verification and trusted code signing are still
 > recommended before broad public distribution.
 
-![Marklift desktop interface](docs/images/marklift-main-window.jpg)
+![Marklift desktop interface](docs/images/marklift-main-window.png)
 
 *The desktop workflow keeps intake, queue status, source preview, and Markdown
 preview in one window.*
+
+## Download for Windows
+
+For a non-technical user, use the **[Download Marklift for Windows](https://github.com/liquid11/marklift/releases/latest)** link.
+Download the latest `.exe` installer, open it, and follow the setup instructions.
+You do not need to install Python or Tesseract separately.
+
+If the latest-release page does not yet contain an installer, use the
+[Marklift Releases page](https://github.com/liquid11/marklift/releases) to see
+when the Windows installer is published. The source code is available below
+for developers.
 
 ## At a glance
 
