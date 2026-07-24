@@ -25,14 +25,13 @@ preview in one window.*
 
 ## Download for Windows
 
-For a non-technical user, use the **[Download Marklift for Windows](https://github.com/liquid11/marklift/releases/latest)** link.
+For a non-technical user, use the **[Download Marklift for Windows](https://github.com/liquid11/marklift/releases/download/v1.0.0/Marklift-Setup-1.0.0.exe)** link.
 Download the latest `.exe` installer, open it, and follow the setup instructions.
 You do not need to install Python or Tesseract separately.
 
-If the latest-release page does not yet contain an installer, use the
-[Marklift Releases page](https://github.com/liquid11/marklift/releases) to see
-when the Windows installer is published. The source code is available below
-for developers.
+This is the current [Marklift v1.0.0 public release](https://github.com/liquid11/marklift/releases/tag/v1.0.0).
+The [full Releases page](https://github.com/liquid11/marklift/releases) contains
+future versions. The source code is available below for developers.
 
 ## At a glance
 
